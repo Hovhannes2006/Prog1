@@ -1,0 +1,77 @@
+<!-- Copyright Nargizyan Hovhannes -->
+<!-- Designer Nargizyan Hovhannes -->
+<!-- Web-Developer Nargizyan Hovhannes -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music Player</title>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Sriracha&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/f6b55d19e8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 gray" style="font-family: 'Sriracha', cursive;">
+                    <div class="row row-1" style="margin-left: 0.25rem;"><a href="#" onclick="toHome()" id="homePage">MusLand.am</a></div>
+                    <div class="row row-1" style="margin-left: 0.25rem; margin-top: 2.5rem;"><a href="#" onclick="allTracks()">All Tracks</a></div>
+                    <div class="row row-1" style="margin-left: 0.25rem;"><a href="#" onclick="topOfWeek()">Top of Week</a></div>
+                    <div class="row row-1" style="margin-left: 0.25rem;"><a href="#" onclick="releases()">New Realeses</a></div>
+                    <div class="row row-1" style="margin-left: 0.25rem;"><a href="#" title="It's not working" onclick="myFav()">My Favorite</a></div>
+                    <div class="row row-1" style="margin-top: 151px; margin-left: 0.25rem; margin-bottom: 1rem;"><a href="#" onclick="aler()" title="It's not working">Settings</a></div>
+                </div>
+                <div class="col music-img" id="back">
+                    <div class="container-fluid h-100">
+                        <div class="row justify-content-center text-center" style="max-width: 1000px;">
+                            <div class="col-5 playerCard">
+                                <img id="jpg" style="margin-top: 1rem; width: 200px; margin-left: auto; margin-right: auto; border-radius: 3px;" />
+                                <br />
+                                <p id="time" style="margin-top: 10px;"><span id="currentTime"></span><span id="totTime"></span></p>
+                                <input type="range" class="level" id="range" value="0" min="0" style="width: 100%;" />
+                                <div class="buttons" style="text-align: center;">
+                                    <i class="fas fa-backward" id="pre" style="font-size: 35px;" onclick="prev()"></i>
+                                    <i class="fas fa-play" id="play" style="font-size: 35px; margin-left: 35px;" onclick="playOrPauseSong()"></i>
+                                    <i class="fas fa-forward" id="skip" style="font-size: 35px; margin-left: 35px;" onclick="next()"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid gray" style="border-top: 1px solid #777; height: 100px; font-family: 'DM Mono', monospace; font-weight: 700;">
+            <div class="container h-100">
+                <div class="row h-100 justify-content-between">
+                    <div class="buttons my-auto p-1 my-auto" style="text-align: center; color: #bbb;" id = "footerBtn">
+                        <i class="fas fa-backward" id="pre" style="font-size: 30px;" onclick="prev()"></i>
+                        <i class="fas fa-play" id="play1" style="font-size: 30px; margin-left: 25px;" onclick="playOrPauseSong1()"></i>
+                        <i class="fas fa-forward" id="skip" style="font-size: 30px; margin-left: 25px;" onclick="next()"></i>
+                    </div>
+                    <div class="col-auto">
+                        <img id="img" class="images" style="height: 75px; margin-top: 13px; border-radius: 5px;" />
+                    </div>
+                    <div class="col-8" style="font-size: 25px; font-weight: 200; margin-top: auto; margin-bottom: auto;" id = "info">
+                        <div class="row guyn" id="ArtistName"></div>
+                        <div class="row guyn" id="MusicName"></div>
+                    </div>
+                    <div class="col-auto my-auto" id = "heart" style="color: #B9B7AF" onclick="liked()">
+                        <i class="far fa-heart" id = "srtik"></i>
+                    </div>
+                    <div class="col-auto d-flex justify-content-between p-2" style="margin-top: auto; margin-bottom: auto; border: 1px solid #555; font-size: 25px; border-radius: 10px; background-color: #bbb;">
+                        <i class="fas fa-volume-down my-auto" onclick="volDown()"></i>
+                        <p class="my-auto" style="font-size: 15px; padding: 0 10px 0 10px;">Volume</p>
+                        <i class="fas fa-volume-up my-auto" onclick="volUp()"></i>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

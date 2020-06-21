@@ -1,0 +1,117 @@
+/* Copyright Nargizyan Hovhannes */
+/* Designer Nargizyan Hovhannes */
+/* Web-Developer Nargizyan Hovhannes */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hot {
+    background: rgb(6, 73, 128);
+}
+
+.new {
+    background: rgb(180, 169, 4);
+}
+
+.liked {
+    background: rgb(219, 32, 7);
+}
+
+.setHeight {
+    height: 150px !important;
+}
+
+.carLinks {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.carLinks:hover {
+    color: white;
+}
+
+.row-1 {
+    margin-top: 0.75rem;
+    font-size: 30px;
+}
+
+.row-1 a {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.row-1 a:hover {
+    transition: 1s all;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.gray {
+    background: rgb(44, 44, 44);
+}
+
+i {
+    cursor: pointer;
+}
+
+.playerCard {
+    background: aliceblue;
+    margin-top: 10%;
+    display: block;
+    border-radius: 15px;
+    box-shadow: -25px -20px 24px -10px rgba(255, 255, 255, 0.77), 25px 20px 24px -10px rgba(0, 0, 0, 0.77);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    #jpg {
+        width: 50px !important;
+    }
+}
+
+.guyn {
+    color: cornsilk;
+}
+
+.setFont {
+    font-size: 20px;
+}
+
+.setMt {
+    margin-top: 9px !important;
+}
+
+.backOfText {
+    background-image: url(imgForCSS/backOfText.png);
+    padding: 9px 0 9px 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.backOfText1 {
+    background-image: url(imgForCSS/backOfText.png);
+    padding: 9px 0 9px 0;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+#heart {
+    font-size: 25px;
+}
+
+#heart :hover {
+    color: crimson;
+}
